@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:beige;">
+    <h1 style="text-align:center;">Lets play Rock,Paper & Sister</h1>
+    <div style="margin-left: 50%;">
+    <button class="rock" style="display: block;background-color: aqua;"onclick="playgame('rock')">Rock</button>
+    <button style="display: block;margin-top: 5px;background-color:bisque;"onclick="playgame('paper')">Paper</button>
+    <button style="display: block;margin-top: 5.5px;background-color: blueviolet;"onclick="playgame('Scissor')">Scissor</button>
+</div>
+<script>
+function playgame(userchoice){
+    const choices=['rock','paper','Scissor'];
+    const compchoices=choices[Math.floor(Math.random()*3)]
+    if(userchoice==compchoices){
+        alert("it is a tie");
+    }
+    else if((userchoice === 'rock' && compchoices === 'Scissor') ||
+            (userchoice === 'paper' && compchoices=== 'rock')    ||
+            (userchoice=== 'Scissor' && compchoices=== 'paper') ){
+                alert("the User won");
+            }
+            else{
+                alert("the computer has won ");
+            }
+}
+</script>
+</body>
+</html>
